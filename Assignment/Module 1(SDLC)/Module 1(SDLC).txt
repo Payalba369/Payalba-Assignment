@@ -17,3 +17,13 @@ Ans.3	The software development lifecycle (SDLC) is the cost-effective and time-e
 	4.Implementation:In the implementation phase, the development team codes the product. They analyze the requirements to identify smaller coding tasks they can do daily to achieve the final result.
 	5.Testing: The development team combines automation and manual testing to check the software for bugs. Quality analysis includes testing the software for errors and checking if it meets customer requirements. Because many teams immediately test the code they write, the testing phase often runs parallel to the development phase.
 	6.Maintenance: The SDLC doesn’t end when software reaches the market. Developers must now move into a maintenancemaintenance stage | 7 Phases of the System Development Life Cycle Guide mode and begin practicing any activities required to handle issues reported by end-users. Furthermore, developers are responsible for implementing any changes that the software might need after deployment.This can include handling residual bugs that were not able to be patched before launch or resolving new issues that crop up due to user reports. Larger systems may require longer maintenance stages compared to smaller systems.
+
+Que.4	What is DFD?
+Ans.4	DFD stand for Data Flow Diagram. The flow of data of a system or a process is represented by DFD. It also gives insight into the inputs and outputs of each entity and the process itself. DFD does not have control flow and no loops or decision rules are present.
+
+
+Que.5	What is Flow chart?
+Ans.5	A flowchart is a type of diagram that represents a workflow or process. A flowchart can also be defined as a diagrammatic representation of an algorithm, a step-by-step approach to solving a task.
+
+Que.6	What is Use case Diagram?
+Ans.6	A use case diagram is a graphical depiction of a user's possible interactions with a system. A use case diagram shows various use cases and different types of users the system has and will often be accompanied by other types of diagrams as well. The use cases are represented by either circles or ellipses. The actors are often shown as stick figures.
