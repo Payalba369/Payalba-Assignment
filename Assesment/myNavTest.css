@@ -1,0 +1,114 @@
+.navbar{
+    width: 100%;
+   overflow: hidden;
+    background-color: blue;
+    color: white;
+    
+    
+}
+
+.navbar a {
+
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 14px;
+    margin-top: 3px;
+    margin-right: 16px;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+/* Navigation bar with hover */
+.navbar a:hover{
+    background-color: aqua;
+    color: blue;
+    
+}
+
+/* Right Navigation */
+.navRight{
+    float: right;
+}
+#nRight {
+    float: right;
+}
+
+/* Login code & style */
+.navbar .login button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 3px;
+    margin-right: 16px;
+    background-color: white;
+    color: black;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  /* Dropdown align */
+.drop {
+    float: left;
+    overflow: hidden;
+}
+.drop .dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin-top: 3px;
+    margin-right: 16px;
+
+}
+
+/* Dropdown hover */
+.navbar a:hover, .drop:hover .dropbtn {
+background-color: rgb(216, 27, 184);
+}
+/* Dropdown content style */
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: bisque;
+    min-width: 160px;
+    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.drop-content a {
+    float: none;
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    
+}
+
+/* style for sub Dropdown */
+.drop-content-sub {
+    display: none;
+    position: absolute;
+    top: 85px;
+    right: -300px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 300px;
+}
+
+/* color of dropdown  hover */
+.drop-content a:hover {
+    background-color: #ddd;
+}
+/* Display the dropdown menu on hover */
+.drop:hover .drop-content {
+    display: block;
+}
+/* Change the background color of the dropdown button when the dropdown content is display */
+.drop-sub:hover .drop-content-sub {
+    display: block;
+}

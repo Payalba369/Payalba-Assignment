@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="myNavTest.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a> <img src="logo.jpg" alt="logo" style="width:40px;"> </a> <!-- Logo for Navigation Bar-->
+
+        <div class="navRight">
+            <a class="login"> <button type="submit">Login</button></a> <!--Login Button-->
+        </div>
+
+        <div class="navRight">
+            <a href="#blog">Blog</a>
+            <a href="#con">Contact</a> </div>
+
+            <!-- Dropdown Menu with hover without UL, OL, & LI tag-->
+        <div class="drop" id="nRight">
+            <button class="dropbtn">Service
+                  <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="drop-content">
+                <a href="#">Web Designing</a>
+                <a href="#">Marketing</a>
+                <a href="#">Word Press</a>
+                <div class="drop-sub">
+                    <button class="dropbtn">More &nbsp; >
+                  <i class="fa fa-caret-right"></i>
+                </button>
+                    <!-- Sub Dropdown Menu -->
+                    <div class="drop-content-sub">
+                        <a href="#">HTML</a>
+                        <a href="#">css</a>
+                        <a href="#">Java Scriept</a>
+                        <a href="#">JQuery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navRight">
+            <a href="#hom">Home</a>
+            <a href="#ab">About</a> </div>
+    </div>
+
+</body>
+
+</html>
