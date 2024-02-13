@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteShopy
+    
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .nav1{
+        width: 100%;
+        background-color: black;
+        padding: 10px;
+    }
+    .nav1 a{
+        color: aliceblue;
+        padding: 80px;
+        border-right-style: solid gray;
+    }
+    .nav2{
+       padding: 1px;
+    }
+    .nav2 td{
+        padding: 20px;
+    }
+    .search{
+        margin: 10px 1px 5px 50px;
+        width: 350px;
+        padding: 20px;
+        border-color: rgb(238, 231, 231);
+    }
+    #search{
+        background-color: rgb(12, 214, 214);
+        margin: 10px 1px 5px 1px;
+        padding: 5px;
+        border: none;
+        width: 55px;
+        height: 56px;
+        background-repeat: no-repeat;
+    }
+    .logo1{
+        font-size: 50px;
+        text-decoration: none;
+        color: #000;
+    }
+    .logo1 span{
+        background: #000;
+        padding: 0 17px;
+        font-weight: bold;
+        font-size: 50px;
+        color: #fff;
+    }
+    .nav3{
+        width: 100%;
+        background-color: blue;
+        padding: 5px;
+        display: flex;
+      position: relative;
+      overflow: hidden;
+      
+    }
+    .nav3 a{
+        color: aliceblue;
+        padding: 20px;
+        font-size: 20px;
+        text-decoration: none;
+        position: relative;
+        
+    }
+    .nav3 .list{
+        position: absolute;
+        width: 100px;
+        display: none;
+        background-color: beige;
+        list-style: none;
+        color: #000;
+        text-align: center;
+        /*top: 100%;*/
+        padding: 5px;
+        left: 2px;
+        overflow: hidden;
+        
+    }
+    .nav3 a:hover .list{
+        display: block;
+    }
+    
+    /*Banner Image Top*/
+    .container{
+        position: relative;
+        overflow: hidden;
+    }
+    section{
+        display: flex;
+    }
+    .icenter{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+    }
+    .shopping{
+        background-color: aqua;
+        padding: 10px;
+        width: 100px;
+        color: black;
+        margin: 10px 10px;
+        position: relative;   
+        display: inline-block;
+        backface-visibility: hidden;
+        vertical-align: middle;
+        text-align: center;
+        transform: translateZ(0);
+       
+    }
+    .shopping::before{
+            content: '';
+            position: absolute;
+            border: aqua solid 4px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transition-duration: 0.3s;
+            transition-property: top, right, left, bottom;
+
+    }
+   /* .shopping:hover::before{
+        top:-8px;
+        right: -8px;
+        left: -8px;
+        bottom: -8px;
+    }*/
+    .shopping:hover::before,.shopping:focus::before,.shopping:active::before{
+        top:-8px;
+        right: -8px;
+        left: -8px;
+        bottom: -8px;
+    }
+    /* Image Box & Border Box hover*/
+    .imgbox1{
+        height: 300px;
+        width: 400px;
+        margin: 50px auto;
+        border: 20px solid rgba(0,0, 0,0.1);
+        background-size: 100% 100%;
+        background-origin: border-box;        
+        background: url("bottom1.jpg");
+        position: relative;
+    }
+    .imgbox2{
+        height: 300px;
+        width: 400px;
+        margin: 50px auto;
+        border: 20px solid rgba(0,0, 0,0.1);
+        background-size: 100% 100%;
+        background-origin: border-box;        
+       background: url("bottom2.jpg");
+        position: relative;
+    }
+    .boxBorder{
+          /* padding: 10px;*/
+            margin: 5em;
+            width: 300px;
+            top: 30%;
+            left:30%;
+            bottom: 20%;
+            right: 20%;
+            transform: translate(-50%,-50%);
+            height: 200px;
+            overflow: hidden;
+            position: absolute;
+           
+        }
+       .imgbox1:hover{
+            transform: translateX(20px);
+        }
+        .imgbox1:hover .boxBorder{
+            border: 5px solid white;
+        }
+        .imgbox2:hover{
+            transform: translateX(20px);
+        }
+        .imgbox2:hover .boxBorder{
+            border: 5px solid white;
+        }
+    /*Add Cart & Quick View*/
+
+    .mCart{
+        height: 350px;
+        width: 250px;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+        box-shadow: 0 0 10px 10px  #D6D6D6;
+       
+    }
+    .new{
+        width: 30px;
+        background-color: #e73939;
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+        float: right;
+      /* position: absolute;*/
+    }
+    .center2{
+            height: 350px;
+            width: 200px;
+            margin: 100px;
+            border: 1px solid;
+            position: relative;
+            overflow: hidden;
+        }
+    .ImgCart{
+        
+        top: 25px;
+        height: 200px;
+        position: absolute;
+       width: 100%;
+       display: inline-block;
+       transition: 1s;
+       
+    }
+    .quik{
+        position: absolute;
+        width: 200px;
+        bottom: 100%;
+        background-color: #000;
+        color: white;
+        padding: 5px;
+        transition: 1s;
+        text-align: center;
+        /*overflow: hidden;*/
+    }
+   .ImgCart:hover{
+        rotate: y 180deg;
+    }
+    .ImgCart:hover .quik{
+       background: #2fdab8 none repeat scroll 0 0;
+       background: scroll 0 0;
+        translate: 0px 200px;
+    }
+    .CartContain{
+        text-align: center;
+        position: absolute;
+        bottom: 70px;
+        width: 100%;
+    }
+    
+    .AddCart{
+        background-color: aqua;
+        padding: 10px;
+        width: 100px;
+        color: black;
+        margin: 10px 10px;
+        bottom: 0;
+       top: 250px;
+        position: relative;   
+        display: inline-block;
+        backface-visibility: hidden;
+        vertical-align: middle;
+        text-align: center;
+        transform: translate(50%,100%);
+       
+    }
+    .AddCart::before{
+            content: '';
+            position: absolute;
+            border: aqua solid 4px;
+           top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transition-duration: 0.3s;
+            transition-property: top, right, left, bottom;
+
+    }
+   .AddCart:hover::before{
+        top:-8px;
+        right: -8px;
+        left: -8px;
+        bottom: -8px;
+    }
+</style>
+</head>
+<body>
+    <div class="nav1">
+        <a href=""><i class="fa fa-lock">&nbsp;</i> Sign In</a>
+        <a href=""><i class="fa fa-edit">&nbsp;</i> Sign Up</a>
+        <a href=""><i class="fa fa-phone">&nbsp;</i> Call : 01234567898</a>
+        <a href=""><i class="fa fa-envelope">&nbsp;</i> info@example.com</a>
+    </div>
+
+    <div class="nav2">
+        <table>
+            <tr>
+                <td>
+                    <a href=""><input type="text" placeholder="search hear..." class="search"></a>
+                    <a href=""> <input type="submit" value=" " id="search" style="background-image: url(search.png);"></a>
+                    <a href="">  </a>
+                </td>
+                <td>
+                    <a href="" class="logo1"><span style="color:white;font-weight:thick">E</span>lite Shoppy </a>
+                </td>
+                <td>Share On : <i class="fa fa-facebook" aria-hidden="true" style="background-color: rgb(96, 96, 207); font-size: 25px;width: 30px; text-align: center;color: #fff;"></i>
+                    <i class="fa fa-twitter" aria-hidden="true" style="background-color: rgb(59, 157, 223); font-size: 25px;width: 30px; text-align: center;color: #fff;"></i>
+                    <i class="fa fa-instagram" aria-hidden="true" style="background-color: rgb(228, 92, 13); font-size: 25px;width: 30px; text-align: center;color: #fff;"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true" style="background-color: rgb(228, 13, 13); font-size: 25px;width: 30px; text-align: center;color: #fff;"></i>
+
+                </td>
+            </tr>
+        </table>
+        <!--<a href=""><input type="text" placeholder="search hear..." class="search"></a>
+        <a href=""> <input type="submit" value=" " id="search" style="background-image: url(search.png);"></a>
+        <a href="">  </a>
+        <a href="" class="logo1"><span style="color:white;font-weight:thick">E</span>lite Shoppy </a>-->
+
+    </div>
+
+    <div class="nav3">
+        <a href=""> Home</a>
+        <a href=""> About</a>
+        <a href=""> Men's Wear
+            <ul class="list">
+                <li>Clothing</li>
+                <li>Wallets</li>
+                <li>Footwear</li>
+                <li>Watches</li>
+            </ul></a>
+    
+        <a href=""> Women
+            <ul class="list">
+                <li>Clothing</li>
+                <li>Wallets</li>
+                <li>Footwear</li>
+                <li>Watches</li>
+            </ul></a>
+    
+        <a href=""> Short Codees</a>
+        <a href=""> Contact</a>
+    </div>
+    <div class="container">
+        <img src="top2.jpg" width="100%" height="400px">
+        <div class="icenter">
+            <a class="shopping"> Shop Now</a>
+        </div>
+    </div>
+
+    <section>
+        <div class="imgbox1">  
+            <div class="boxBorder"></div>
+        </div>
+        
+        <div class="imgbox2"> 
+            <div class="boxBorder"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="mCart">
+            <div class="quik">Quick View</div>
+            <div class="new">New</div>
+            <div class="ImgCart"><img src="m1.jpg" height="100%" width="100%"  alt=""></div>
+            <div class="CartContain">
+                <p style="color:red">Formal Blue Shirt</p>
+                <p>$45.99 <strike>$69.71</strike></p>
+            </div>
+            <div class="AddCart"> Add to Cart </div>
+        </div>
+
+
+
+        <div class="mCart"><div class="new">New</div></div>
+        <div class="mCart"><div class="new">New</div></div>
+        <div class="mCart"><div class="new">New</div></div>
+    </section>
+    
+   
+</body>
+</html>

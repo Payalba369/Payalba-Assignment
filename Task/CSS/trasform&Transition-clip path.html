@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         div{
+            margin: 5px;
+        }
+        .penta {
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            clip-path: polygon(50% 0%,100% 25%,90% 100%,10% 100%,0% 25%);
+        }
+        .daimd{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(155, 33, 53);
+            clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%);
+        }
+        .sim{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(214, 236, 17);
+            clip-path: polygon(0% 0%,120% 0%,120% 25%,60% 70%,0% 70%);
+        }
+        .cur{
+            overflow: hidden;
+        }
+        .cur1{
+            background:radial-gradient(ellipse, trasperent 7px, black 7px,black 10px, trasperent 11px);
+        }
+    </style>
+</head>
+<body>
+    <div class="penta"></div>
+    <div class="daimd"></div>
+    <div class="sim"></div>
+    <div class="cur">
+        <div class="cur1"></div>
+    </div>
+
+
+</body>
+</html>

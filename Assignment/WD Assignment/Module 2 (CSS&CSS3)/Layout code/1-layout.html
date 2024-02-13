@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /**
+ * ----------------------------------------
+ * Header Style
+ * ----------------------------------------
+ */
+        .head {
+            text-align: center;
+            font-size: 30px;
+            background-color: rgb(89, 177, 89);
+        }
+             /**
+ * ----------------------------------------
+ *Navigation bar Stle 
+ * ----------------------------------------
+ */
+        .nav1 {
+            background-color: rgb(167, 142, 190);
+            width: 100%;
+        }
+        
+        .list1 {
+            display: flex;
+            list-style: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+        }
+        
+        .list1 a {
+            text-decoration: none;
+            /*background-color: aqua;*/
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        /**
+ * ----------------------------------------
+ * Create two unequal columns
+ * ----------------------------------------
+ */
+       
+        
+        .main {
+            display: flex;
+        }
+        /* Left column */
+        
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+        /* Right column */
+        
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+              /**
+ * ----------------------------------------
+ * Footer Style
+ * ----------------------------------------
+ */ 
+        .footer {
+            text-align: center;
+            color: rgb(22, 22, 22);
+            font-size: 25px;
+            background-color: rgb(89, 177, 89);
+        }
+           /**
+ * ----------------------------------------
+ * Social Media Icon
+ * ----------------------------------------
+ */    
+        .follow {
+            text-decoration: none;
+        }
+
+/**
+ * ----------------------------------------
+ * animation text-blur-out
+ * ----------------------------------------
+ */     .text-blur-out {
+                color: blue;
+                font-size: 30px;
+                text-align: center;
+		        animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s infinite both;
+        }
+        
+@keyframes text-blur-out {
+  0% {
+    
+            filter: blur(0.01);
+  }
+  100% {
+    
+            filter: blur(12px) opacity(0%);
+  }
+}
+/**
+ * ----------------------------------------
+End the Style Sheet
+ * ----------------------------------------
+ */ 
+    </style>
+
+</head>
+
+<body>
+    <!--Header-->
+    <header class="head">
+        <h1> Nature Environment Layout</h1>
+    </header>
+    <!--Navigation baar-->
+    <nav class="nav1">
+        <div class="div1">
+            <ul class="list1">
+                <li><a href=""> Home </a></li>
+                <li><a href=""> About</a></li>
+                <li><a href=""> Photo Gallery</a></li>
+                <li><a href=""> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Two Coloumn-->
+    <div class="main">
+        <!--First Coloumn-->
+        <div class="leftcolumn">
+            <h1> Save The Environment</h1>
+            <img src="nature.jpg" width="800px" height="400px">
+            <p>
+                Nature can refer to the general realm of living plants and animals, and in some cases to the processes associated with inanimate objects— the way that particular types of things exist and change of their own accord, such as the weather and geology of
+                the Earth. During the advent of modern scientific method in the last several centuries, nature became the passive reality, organized and moved by divine laws. With the Industrial revolution, nature increasingly became seen as the part
+                of reality deprived from intentional intervention: it was hence considered as sacred by some traditions (Rousseau, American transcendentalism) or a mere decorum for divine providence or human history.
+            </p>
+            <img src="nature3.jpg" width="800px" height="400px">
+            <p>
+                Nature is sending us a message with the coronavirus pandemic and the ongoing climate crisis, UN’s environment programme chief, told Guardian.
+            </p> <br><br>
+             <!--Text Blur Animation-->
+            <div class="text-blur-out">
+                <h1>Go Green Breath Clean</h1>
+            </div>
+        </div>
+         <!--Second Coloumn-->
+        <div class="rightcolumn">
+            <h1> About</h1>
+            <p>In nature, nothing is perfect and everything is perfect. Trees can be contorted, bent in weird ways, and they're still beautiful
+            </p>
+            <div>
+                <img src="nature2.jpg" width="250px">
+                <p>Look into the nature, and then you will <br> understand everything.</p>
+            </div>
+            <br>
+            <div>
+                <img src="nature4.jpg" width="250px">
+                <p>Every flower is a soul blossoming in the nature.</p>
+                <br>
+            </div>
+            <br>
+            <div>
+                <img src="nature5.jpg" width="250px">
+                <p>Ithink having land and not ruining it is the most beautiful art that anybody could ever want</p>
+                <br>
+            </div>
+           
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <h1> "Nature is not a place to visit. It is home."</h1>
+        <div>
+            <a href="" class="follow"> Follow : 
+                <i class="fa fa-facebook" style="font-size:35px;color:rgb(76, 154, 180);"></i> &nbsp;
+                <i class="fa fa-instagram" style="font-size:35px;color:rgb(151, 51, 98);"></i>
+                
+        </div>
+    </div>
+</body>
+
+</html>
