@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+
+</head> 
+  
+<body> 
+    <div> 
+        <button id="addEle">Add Element</button> 
+    </div> 
+    <div class="dyEle"></div> 
+    <script type="text/javascript"> 
+  
+        // parent element for the new div will be created 
+        let task = document.getElementsByClassName("dyEle"); 
+  
+        // to get the addTask button element 
+        let addEle = document.getElementById("addEle"); 
+          
+        // onclick event for button 
+        addEle.addEventListener('click', function () { 
+      
+            
+            for (let i = 0; i < task.length; i++) { 
+                  
+                // New div element is created   
+                let newDiv = document.createElement("div"); 
+                      
+                //To Set the attribute of class type to newDiv  
+                newDiv.setAttribute("class", "list"); 
+                     
+                // Text for newDiv  
+                newDiv.innerText = "New Element created"; 
+                       
+                // append the newDiv  
+                task[i].append(newDiv); 
+            } 
+        }) 
+    </script> 
+</body> 
+  
+</html> 

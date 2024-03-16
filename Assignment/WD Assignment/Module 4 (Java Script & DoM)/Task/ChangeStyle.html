@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <style>
+        .hide {
+            display: none;
+        }
+ 
+        .blueColor {
+            color: blue;
+        }
+    </style>
+</head>
+ 
+<body>
+    <h1 style="color: green;">
+        Payalba Parmar
+    </h1>
+     
+    <h2>
+        How can the style/class of
+        an element be changed?
+    </h2>
+     
+    <h3>Hide and Show the Para</h3>
+     
+    <p>
+        "Natural force" redirects here. For the music album, see Natural Force.
+
+        Land management has preserved the natural characteristics of Hopetoun Falls, Australia while allowing ample access for visitors.
+        
+        An image of the Sahara Desert from satellite. It is the world's largest hot desert and third-largest desert after the polar deserts.
+        The natural environment or natural world encompasses all living and non-living things occurring naturally, meaning in this case not artificial. 
+        The term is most often applied to Earth or some parts of Earth. 
+        This environment encompasses the interaction of all living species, climate, weather and natural resources that affect human survival and economic activity.
+        [1] The concept of the natural environment can be distinguished as components:
+        
+        Complete ecological units that function as natural systems without massive civilized human intervention,
+         including all vegetation, microorganisms, soil, rocks, the atmosphere, and natural phenomena that occur within their boundaries and their nature.
+        Universal natural resources and physical phenomena that lack clear-cut boundaries, such as air, water, 
+        and climate, as well as energy, radiation, electric charge, and magnetism, not originating from civilized human actions.
+    </p>
+     
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="color">Change Color</button>
+ 
+    <script>
+        const btn_hide = document.getElementById("hide");
+        const btn_show = document.getElementById("show");
+        const btn_color = document.getElementById("color");
+ 
+        const para = document.querySelector("p");
+        btn_hide.addEventListener("click", function () {
+            para.classList.add("hide");
+        });
+ 
+        btn_show.addEventListener("click", function () {
+            para.classList.remove("hide");
+        });
+ 
+        btn_color.addEventListener("click", function () {
+            para.classList.toggle("blueColor");
+        });
+    </script>
+</body>
+ 
+</html>
