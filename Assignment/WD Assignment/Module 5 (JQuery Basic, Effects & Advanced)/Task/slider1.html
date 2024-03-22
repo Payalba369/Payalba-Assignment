@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of jQuery Slide-Toggle Effect</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style>
+    p{
+        padding: 20px;
+        background: #3fbb53;
+    }
+
+ </style>
+<script>
+$(document).ready(function(){
+    
+    $(".toggle-btn").click(function(){
+        $("p").slideToggle();
+    });
+});
+
+
+
+</script>
+</head>
+<body>
+    <button type="button" class="toggle-btn">Slide Toggle & Animation</button> 
+    <p>Slider Animation</p>
+   
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS using Jquary</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+</head>
+  
+<body style="text-align: center;  
+    border: 2px solid rgb(34, 5, 114); 
+    min-height: 240px;"> 
+    <h1 style="color:rgb(133, 11, 82);"> 
+        CSS using Jquary
+    </h1> 
+  
+    <p id="context"> 
+        How to Apply CSS Using JQuery
+    </p> 
+  
+    <br> 
+  
+    <button id="change"> 
+        Apply 
+    </button> 
+  
+    <script> 
+        let css_property = 
+        { 
+            "color": "green", 
+            "font-size": " 30px" 
+        } 
+        $('#change').on('click', function () { 
+  
+           
+            $('#context').css(css_property); 
+        });                 
+            
+
+    </script> 
+</body> 
+  
+</html>
+
+

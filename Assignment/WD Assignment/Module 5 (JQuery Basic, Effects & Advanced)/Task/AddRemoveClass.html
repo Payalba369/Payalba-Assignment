@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#add").click(function(){
+    $("#div1 ").addClass("important blue");
+  });
+});
+
+$(document).ready(function(){
+  $("#remuv").click(function(){
+    $("#div1 ").removeClass("important blue");
+  });
+});
+
+</script>
+
+
+<style>
+.important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.blue {
+  color: blue;
+}
+</style>
+
+
+</head>
+<body>
+
+<div id="div1">..Add Class and Remove Class in Jquery..</div>
+
+<br>
+
+<button id="add">Add class</button>
+<button id="remuv">Remove class</button>
+</body>
+</html>
+
+
+
