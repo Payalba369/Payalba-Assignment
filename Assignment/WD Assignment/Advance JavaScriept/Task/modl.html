@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .button {
+            font-family: 'poppins', sans-serif;
+            display: inline-block;
+            background: crimson;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 16px;
+            margin-top: 20px;
+            border-radius: 6px;
+            border: 2px solid crimson;
+            transition: all 0.3s ease;
+        }
+        
+        .button:hover {
+            color: crimson;
+            background: none;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 99999;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+            margin: 50px auto;
+            width: 60%;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+            animation-name: modalopen;
+            animation-duration: var(--modal-duration);
+        }
+        
+        .modal-header h2,
+        .modal-footer h3 {
+            margin: 0;
+        }
+        
+        .modal-header {
+            background: var(--modal-color);
+            text-align: center;
+            padding: 10px;
+            color: #181817;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        
+        .modal-body {
+            padding: 10px 5px 1px 5px;
+            background: #fff;
+        }
+        
+        .modal-footer {
+            background: var(--modal-color);
+            padding: 10px;
+            font-size: 15px;
+            font-weight: lighter;
+            color: #fff;
+            text-align: center;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .close {
+            color: #ccc;
+            float: right;
+            font-size: 30px;
+            color: #fff;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+        
+        @keyframes modalopen {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>A modal box using css and Js with three buttons</h2>
+    <!-- 3 Buttons Start -->
+    <button id="modal-btn" class="button">Punjabi</button>
+    <div id="my-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h3>Restaurent Menu:</h3>
+            </div>
+            <div class="modal-body">
+                <img src="https://thefinancialexpress.com.bd/uploads/1575560371.jpg" alt="RestaurentMenu" class="responsive">
+            </div>
+            <div class="modal-footer">
+                <p>
+                    Footer
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <button id="modal-btn2" class="button">Gujarati</button>
+    <div id="my-modal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+
+            </div>
+            <div class="modal-body">
+                <img src="#" alt="RestaurentMenu" class="responsive">
+            </div>
+            <div class="modal-footer">
+                ...
+            </div>
+        </div>
+    </div>
+
+
+
+    <button id="modal-btn3" class="button">South Indian</button>
+    <div id="my-modal3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Box Modal -->
+
+    <script>
+        const modal = document.querySelector('#my-modal');
+        const modalBtn = document.querySelectorAll('.button');
+        const closeBtn = document.querySelector('.close');
+
+
+        modalBtn.forEach(btn => btn.addEventListener('click', openModal));
+        closeBtn.addEventListener('click', closeModal);
+        window.addEventListener('click', outsideClick);
+
+
+        function openModal() {
+            modal.style.display = 'block';
+        }
+
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+
+        function outsideClick(e) {
+            if (e.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

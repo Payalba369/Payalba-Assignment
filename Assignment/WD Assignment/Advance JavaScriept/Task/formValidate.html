@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" onsubmit="">
+        <div>
+            <input type="text" placeholder="name" id="nm">
+            <span id="nmerr"></span>
+        </div>
+        <div>
+            <input type="password" placeholder="password" id="pwd">
+            <span id="pwderr"></span>
+        </div>
+        <div>
+            <input type="text" placeholder="Cpassword" id="cpwd">
+        </div>
+        <div>
+            <input type="text" placeholder="phone number" id="mb">
+            <span id="mberr"></span>
+        </div>
+        <input type="submit" onclick="return valdation()">
+    </form>
+
+    <script>
+        var name1 = document.getElementById("nm")
+        var nmerror = document.getElementById("nmerr")
+        var password1 = document.getElementById("pwd")
+        var pwderror = document.getElementById("pwderr")
+        var cpassword1 = document.getElementById("cpwd")
+        var mobile1 = document.getElementById("mb")
+        var mberr1 = document.getElementById("mberr")
+
+        function valdation() {
+            if (name1.value == "" || name1.value == null) {
+                nmerror.innerHTML = "..!pls required name.."
+                nmerror.style.color = "red";
+                return false
+            } else {
+                nmerror.innerHTML = ""
+            }
+            if (password1.value == "" || password1.value == null) {
+                pwderror.innerHTML = "..!pls required paswword.."
+                pwderror.style.color = "red";
+                return false
+            } else {
+                pwderror.innerHTML = ""
+            }
+            if (password1.value != cpassword1.value) {
+                alert("Do not match..?")
+            }
+        }
+    </script>
+</body>
+
+</html>

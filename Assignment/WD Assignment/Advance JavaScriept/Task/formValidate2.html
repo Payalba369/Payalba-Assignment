@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+
+        Name: <input type="text" id="nm" onblur="validate(nm,nmErr)">
+        <span id="nmErr"></span>
+
+        <br><br> Email: <input type="text" id="em" onblur="validate(em,emErr)">
+        <span id="emErr"></span>
+
+        <br><br> mobile: <input type="text" id="mb" onblur="validate(mb,mbErr)">
+        <span id="mbErr"></span>
+
+        <br><br>
+
+
+        <input type="submit">
+    </form>
+
+
+
+
+    <script>
+        // name1 = document.getElementById('nm');
+        // nmSpan = document.getElementById('nmErr');
+
+        function validate(e, spId) {
+
+            console.log(e)
+
+            if (e.value == "") {
+                spId.innerHTML = (" *Required..!");
+                spId.style.color = "red";
+                e.style.border = "2px solid red";
+            } else {
+                spId.innerHTML = "";
+                e.style.border = "2px solid green";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
